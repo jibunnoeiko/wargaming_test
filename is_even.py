@@ -1,25 +1,27 @@
 """Even number function"""
-# List to contain even numbers
-even_lst = []
 
 
-def is_Even(number=range(int(input()))):
+def is_even(number=range(11)):
     """Returns even number.
 
     :param number: int contains the number.
     :param even_lst: contains the even numbers.
     :return: list returns list with even numbers.
 
-    Function that takes the number in int, then we go through 
+    Function that takes the number in int, then we go through
     the numbers starting with 2 across 1.
     """
+    # List to contain even numbers
+    even_lst = []
     # Enumerate elements with for loop, starting with 2 across 1
-    for element in range(2, len(number), 2):
-        # Appened even numbers in even_lst
-        even_lst.append(element)
+    for num in range(1, len(number)):
+        if num % 2 == 0:
+            # Appened even numbers in even_lst
+            even_lst.append(num)
     # Return all even numbers
-    return even_lst
+    return (even_lst)
 
 
 # Call function with print function
-print(is_Even())
+even_num = is_even()
+print(even_num)
